@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,11 @@ public class Chunk : MonoBehaviour
     private Region fatherRegion;
     private bool modified = false;
     private bool changesUnsaved;
+
+    private void Start()
+    {
+        Debug.Log("Chunk created");
+    }
 
     /// <summary>
     /// Create a Chunk using a byte[] that contain all the data of the chunk.

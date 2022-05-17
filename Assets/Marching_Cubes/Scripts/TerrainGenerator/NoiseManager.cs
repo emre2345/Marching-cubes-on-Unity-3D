@@ -63,7 +63,9 @@ public class NoiseManager : Singleton<NoiseManager>
 			if(loadedWorldConfig.worldSeed != worldConfig.worldSeed || loadedWorldConfig.biomeScale != worldConfig.biomeScale || loadedWorldConfig.diffToMerge != worldConfig.diffToMerge || loadedWorldConfig.surfaceLevel != worldConfig.surfaceLevel ||
 				loadedWorldConfig.octaves != worldConfig.octaves || loadedWorldConfig.persistance != worldConfig.persistance || loadedWorldConfig.lacunarity != worldConfig.lacunarity)
 			{
+				Debug.Log("Deleting world");
 				WorldManager.DeleteWorld(selectedWorld);//Remove old world
+				Debug.Log("Creating world");
 				WorldManager.CreateWorld(selectedWorld, worldConfig);//Create new world with the new worldConfig
 			}
 

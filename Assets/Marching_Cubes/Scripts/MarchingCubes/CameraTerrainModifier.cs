@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,8 +22,12 @@ public class CameraTerrainModifier : MonoBehaviour
 
     void Awake()
     {
-        chunkManager = ChunkManager.Instance;
         UpdateUI();
+    }
+
+    private void Start()
+    {
+        chunkManager = ChunkManager.Instance;
     }
 
     // Update is called once per frame
